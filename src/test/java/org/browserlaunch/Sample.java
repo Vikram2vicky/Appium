@@ -21,7 +21,7 @@ public class Sample {
 		//create object for andriod
 		
 		AndroidDriver driver=new AndroidDriver(new URL("http://127.0.0.1:4723"), uiAOptions);
-		Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.quit();
 	}
 
